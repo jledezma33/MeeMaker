@@ -1,0 +1,54 @@
+﻿<Window x:Class="Mee_Maker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mee_Maker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="600">
+    <StackPanel x:Name="MainContent" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Height="329" Margin="0,0,0,-9">
+        <Button>Face</Button>
+        <Button>Eyes</Button>
+        <Button>Nose</Button>
+        <Button>Mouth</Button>
+        <Button>Skin Marks</Button>
+        <Canvas x:Name="FaceCanvas" Width="300" Background="SkyBlue" Height="283" Margin="0,23">
+            <Ellipse Height="73" Width="73" Canvas.Top="68" Canvas.Left="114" Fill="Beige" RenderTransformOrigin="1.209,0.67"/>
+            <Rectangle Height="115" Width="50" Fill="Red" RenderTransformOrigin="0.489,0.563" Canvas.Left="124" Canvas.Top="141"/>
+            <Rectangle Height="75" Width="25" Fill="Red" Canvas.Left="86" Canvas.Top="158" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="56.245"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle Height="75" Width="25" Fill="Red" Canvas.Left="183" Canvas.Top="159" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-51.939"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Ellipse Height="15" Width="15" Fill="Black" Canvas.Left="132" Canvas.Top="83"/>
+            <Ellipse Height="15" Width="15" Fill="Black" Canvas.Left="152" Canvas.Top="83" />
+            <Polygon Points="0,0 8,5 0,10" Stroke="Black" Fill="Black" Canvas.Left="145" Canvas.Top="103" RenderTransformOrigin="0.5,0.5" >
+                <Polygon.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="88.438"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Polygon.RenderTransform>
+            </Polygon>
+        </Canvas>
+    </StackPanel>
+
+
+</Window>
