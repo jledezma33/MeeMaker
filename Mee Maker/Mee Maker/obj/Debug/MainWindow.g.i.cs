@@ -41,7 +41,7 @@ namespace Mee_Maker {
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 9 "..\..\MainWindow.xaml"
+        #line 10 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.StackPanel MainContent;
         
@@ -49,9 +49,113 @@ namespace Mee_Maker {
         #line hidden
         
         
+        #line 11 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button Face_Button;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 12 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button Eyes_Button;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 13 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button Nose_Button;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 14 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button Mouth_Button_;
+        
+        #line default
+        #line hidden
+        
+        
         #line 15 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button Skin_Marks_Button;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 16 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Canvas FaceCanvas;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 17 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Shapes.Ellipse Head;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 18 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Shapes.Rectangle Body;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 19 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Shapes.Rectangle Left_Arm;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 29 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Shapes.Rectangle Right_Arm;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 39 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Shapes.Ellipse Left_Eye;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 40 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Shapes.Ellipse Right_Eye;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 41 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Shapes.Polygon Nose;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 51 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Shapes.Ellipse Mouth;
         
         #line default
         #line hidden
@@ -90,7 +194,46 @@ namespace Mee_Maker {
             this.MainContent = ((System.Windows.Controls.StackPanel)(target));
             return;
             case 2:
+            this.Face_Button = ((System.Windows.Controls.Button)(target));
+            return;
+            case 3:
+            this.Eyes_Button = ((System.Windows.Controls.Button)(target));
+            return;
+            case 4:
+            this.Nose_Button = ((System.Windows.Controls.Button)(target));
+            return;
+            case 5:
+            this.Mouth_Button_ = ((System.Windows.Controls.Button)(target));
+            return;
+            case 6:
+            this.Skin_Marks_Button = ((System.Windows.Controls.Button)(target));
+            return;
+            case 7:
             this.FaceCanvas = ((System.Windows.Controls.Canvas)(target));
+            return;
+            case 8:
+            this.Head = ((System.Windows.Shapes.Ellipse)(target));
+            return;
+            case 9:
+            this.Body = ((System.Windows.Shapes.Rectangle)(target));
+            return;
+            case 10:
+            this.Left_Arm = ((System.Windows.Shapes.Rectangle)(target));
+            return;
+            case 11:
+            this.Right_Arm = ((System.Windows.Shapes.Rectangle)(target));
+            return;
+            case 12:
+            this.Left_Eye = ((System.Windows.Shapes.Ellipse)(target));
+            return;
+            case 13:
+            this.Right_Eye = ((System.Windows.Shapes.Ellipse)(target));
+            return;
+            case 14:
+            this.Nose = ((System.Windows.Shapes.Polygon)(target));
+            return;
+            case 15:
+            this.Mouth = ((System.Windows.Shapes.Ellipse)(target));
             return;
             }
             this._contentLoaded = true;
