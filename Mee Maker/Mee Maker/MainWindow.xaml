@@ -5,52 +5,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mee_Maker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="600">
-
-    <StackPanel x:Name="MainContent" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Height="329" Margin="0,0,0,-9">
-        <Button x:Name="Face_Button" VerticalAlignment="Top" HorizontalAlignment="Center">Face</Button>
-        <Button x:Name="Eyes_Button" HorizontalAlignment="Center" VerticalAlignment="Top">Eyes</Button>
-        <Button x:Name="Nose_Button" HorizontalAlignment="Center" VerticalAlignment="Top">Nose</Button>
-        <Button x:Name="Mouth_Button_" HorizontalAlignment="Center" VerticalAlignment="Top">Mouth</Button>
-        <Button x:Name="Skin_Marks_Button" HorizontalAlignment="Center" VerticalAlignment="Top">Skin Marks</Button>
-        <Canvas x:Name="FaceCanvas" Width="300" Background="SkyBlue" Height="283" Margin="0,23" HorizontalAlignment="Left">
-            <Ellipse x:Name="Head" Height="73" Width="73" Canvas.Top="68" Canvas.Left="114" Fill="Beige" RenderTransformOrigin="1.209,0.67"/>
-            <Rectangle x:Name="Body" Height="115" Width="50" Fill="Red" RenderTransformOrigin="0.489,0.563" Canvas.Left="124" Canvas.Top="141"/>
-            <Rectangle x:Name="Left_Arm" Height="75" Width="25" Fill="Red" Canvas.Left="86" Canvas.Top="158" RenderTransformOrigin="0.5,0.5">
-                <Rectangle.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="56.245"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Rectangle.RenderTransform>
-            </Rectangle>
-            <Rectangle x:Name="Right_Arm" Height="75" Width="25" Fill="Red" Canvas.Left="183" Canvas.Top="159" RenderTransformOrigin="0.5,0.5">
-                <Rectangle.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-51.939"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Rectangle.RenderTransform>
-            </Rectangle>
-            <Ellipse x:Name="Left_Eye" Height="15" Width="15" Fill="Black" Canvas.Left="132" Canvas.Top="83"/>
-            <Ellipse x:Name="Right_Eye" Height="15" Width="15" Fill="Black" Canvas.Left="152" Canvas.Top="83" />
-            <Polygon x:Name="Nose" Points="0,0 8,5 0,10" Stroke="Black" Fill="Black" Canvas.Left="145" Canvas.Top="103" RenderTransformOrigin="0.5,0.5" >
-                <Polygon.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="88.438"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Polygon.RenderTransform>
-            </Polygon>
-            <Ellipse x:Name="Mouth" Height="15" Width="30" Fill="Black" Canvas.Left="137" Canvas.Top="121"/>
+        Title="MainWindow" Height="350" Width="1000">
+    <StackPanel x:Name="MainContent" Orientation="Horizontal">
+        <Button x:Name="Face_Button" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Face" TabIndex="0" Click="Face_Button_Click"></Button>
+        <Button x:Name="Eyes_Button" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Eyes" TabIndex="1" Click="Eyes_Button_Click"/>
+        <Button x:Name="Nose_Button" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Nose" TabIndex="2" Click="Nose_Button_Click"/>
+        <Button x:Name="Mouth_Button_" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Mouth" TabIndex="3" Click="Mouth_Button__Click"/>
+        <Button x:Name="Blemish_Button" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Blemish" TabIndex="4" Click="Blemish_Button_Click"/>
+        
+        <Canvas x:Name="FaceCanvas" Width="300" Background="SkyBlue" Height="283" Margin="0,23" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse x:Name="Head" Height="{Binding Value, ElementName=FaceHeight}" Width="{Binding Value, ElementName=FaceWidth}" Canvas.Top="{Binding Value, ElementName=FaceY}" Canvas.Left="{Binding Value, ElementName=FaceX}" Fill="Beige" RenderTransformOrigin="1.209,0.67"/>
+            <Ellipse x:Name="Left_Eye" Height="{Binding Value, ElementName=LeftEyeHeight}" Width="{Binding Value, ElementName=LeftEyeWidth}" Fill="Black" Canvas.Left="{Binding Value, ElementName=LeftEyeX}" Canvas.Top="{Binding Value, ElementName=LeftEyeY}"/>
+            <Ellipse x:Name="Right_Eye" Height="{Binding Value, ElementName=RightEyeHeight}" Width="{Binding Value, ElementName=RightEyeWidth}" Fill="Black" Canvas.Left="{Binding Value, ElementName=RightEyeX}" Canvas.Top="{Binding Value, ElementName=RightEyeY}" />
+            <Ellipse x:Name="Mouth" Height="{Binding Value, ElementName=MouthHeight}" Width="{Binding Value, ElementName=MouthWidth}" Fill="Black" Canvas.Left="{Binding Value, ElementName=MouthX}" Canvas.Top="{Binding Value, ElementName=MouthY}"/>
+            <Rectangle x:Name="Nose" Height="{Binding Value, ElementName=NoseHeight}" Width = "{Binding Value, ElementName=NoseWidth}" Fill="Black" Canvas.Left="{Binding Value, ElementName=NoseX}" Canvas.Top="{Binding Value, ElementName=NoseY}"/>
+            <Ellipse x:Name="Blemish" Height="{Binding Value, ElementName=BlemishHeight}" Width="{Binding Value, ElementName=BlemishWidth}" Fill="Black" Canvas.Left="{Binding Value, ElementName=BlemishX}" Canvas.Top="{Binding Value, ElementName=BlemishY}"/>
         </Canvas>
+        
+        <StackPanel x:Name="FaceOptions" Visibility="Hidden">
+            <Slider x:Name="FaceHeight" Minimum="200" Maximum="300" Width="100"></Slider>
+            <Slider x:Name="FaceWidth" Minimum="200" Maximum="300" Width="100"></Slider>
+            <Slider x:Name="FaceX" Minimum="66" Maximum="100" Width="100"></Slider>
+            <Slider x:Name="FaceY" Minimum="45" Maximum="90" Width="100"></Slider>
+            <Button x:Name="Face_Beige" Background="Beige" Height="25" Click="Face_Beige_Click"></Button>
+            <Button x:Name="Face_Brown" Background="Brown" Height="25" Click="Face_Brown_Click"></Button>
+            <Button x:Name="Face_Black" Background="Black" Height="25" Click="Face_Black_Click"></Button>
+        </StackPanel>
+
+        <StackPanel x:Name="EyeOptions" Visibility="Hidden">
+            <Slider x:Name="LeftEyeHeight" Minimum="45" Maximum="90" Width="100"></Slider>
+            <Slider x:Name="LeftEyeWidth" Minimum="45" Maximum="90" Width="100"></Slider>
+            <Slider x:Name="LeftEyeX" Minimum="110" Maximum="150" Width="100"></Slider>
+            <Slider x:Name="LeftEyeY" Minimum="100" Maximum="140" Width="100"></Slider>
+            <Slider x:Name="RightEyeHeight" Minimum="45" Maximum="90" Width="100"></Slider>
+            <Slider x:Name="RightEyeWidth" Minimum="45" Maximum="90" Width="100"></Slider>
+            <Slider x:Name="RightEyeX" Minimum="160" Maximum="210" Width="100"></Slider>
+            <Slider x:Name="RightEyeY" Minimum="100" Maximum="140" Width="100"></Slider>
+            <Button x:Name="Eyes_Black" Background="Black" Height="25" Click="Eyes_Black_Click"></Button>
+            <Button x:Name="Eyes_Blue" Background="Blue" Height="25" Click="Eyes_Blue_Click"></Button>
+            <Button x:Name="Eyes_Brown" Background="Brown" Height="25" Click="Eyes_Brown_Click"></Button>
+            <Button x:Name="Eyes_Green" Background="Green" Height="25" Click="Eyes_Green_Click"></Button>
+        </StackPanel>
+
+        <StackPanel x:Name="NoseOptions" Visibility="Hidden">
+            <Slider x:Name="NoseHeight" Minimum="30" Maximum="60" Width="100"></Slider>
+            <Slider x:Name="NoseWidth" Minimum="15" Maximum="30" Width="100"></Slider>
+            <Slider x:Name="NoseX" Minimum="155" Maximum="175" Width="100"></Slider>
+            <Slider x:Name="NoseY" Minimum="140" Maximum="165" Width="100"></Slider>
+            <Button x:Name="Nose_Beige" Background="Beige" Height="25" Click="Nose_Beige_Click"></Button>
+            <Button x:Name="Nose_Brown" Background="Brown" Height="25" Click="Nose_Brown_Click"></Button>
+            <Button x:Name="Nose_Black" Background="Black" Height="25" Click="Nose_Black_Click"></Button>
+        </StackPanel>
+
+        <StackPanel x:Name="MouthOptions" Visibility="Hidden">
+            <Slider x:Name="MouthHeight" Minimum="45" Maximum="60" Width="100"></Slider>
+            <Slider x:Name="MouthWidth" Minimum="90" Maximum="120" Width="100"></Slider>
+            <Slider x:Name="MouthX" Minimum="120" Maximum="175" Width="100"></Slider>
+            <Slider x:Name="MouthY" Minimum="175" Maximum="250" Width="100"></Slider>
+            <Button x:Name="Mouth_Red" Background="Red" Height="25" Click="Mouth_Red_Click"></Button>
+            <Button x:Name="Mouth_Pink" Background="Pink" Height="25" Click="Mouth_Pink_Click"></Button>
+            <Button x:Name="Mouth_Black" Background="Black" Height="25" Click="Mouth_Black_Click"></Button>
+        </StackPanel>
+
+        <StackPanel x:Name="BlemishOptions" Visibility="Hidden">
+            <Slider x:Name="BlemishHeight" Minimum="15" Maximum="45" Width="100"></Slider>
+            <Slider x:Name="BlemishWidth" Minimum="15" Maximum="45" Width="100"></Slider>
+            <Slider x:Name="BlemishX" Minimum="110" Maximum="135" Width="100"></Slider>
+            <Slider x:Name="BlemishY" Minimum="155" Maximum="175" Width="100"></Slider>
+            <Button x:Name="Blemish_Red" Background="Red" Height="25" Click="Blemish_Red_Click"></Button>
+            <Button x:Name="Blemish_White" Background="White" Height="25" Click="Blemish_White_Click"></Button>
+            <Button x:Name="Blemish_Black" Background="Black" Height="25" Click="Blemish_Black_Click"></Button> 
+        </StackPanel>
     </StackPanel>
-
-
 </Window>

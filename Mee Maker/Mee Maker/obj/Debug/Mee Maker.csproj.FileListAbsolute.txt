@@ -1,1 +1,14 @@
 C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\bin\Debug\Mee Maker.exe.config
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\Mee Maker.csprojResolveAssemblyReference.cache
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\MainWindow.g.cs
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\App.g.cs
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\Mee Maker_MarkupCompile.cache
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\Mee Maker_MarkupCompile.lref
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\bin\Debug\Mee Maker.exe
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\bin\Debug\Mee Maker.pdb
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\MainWindow.baml
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\Mee Maker.g.resources
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\Mee_Maker.Properties.Resources.resources
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\Mee Maker.csproj.GenerateResource.Cache
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\Mee Maker.exe
+C:\Users\Jesus Ledezma\Desktop\School Stuff\Mee Maker\Mee Maker\Mee Maker\obj\Debug\Mee Maker.pdb
